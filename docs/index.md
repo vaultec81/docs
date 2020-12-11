@@ -14,7 +14,7 @@ Learn about the different technologies that make-up Mailscript:
 - [API](#api)
 - [SDK Clients](#sdk-clients)
 - [Templates](#templates)
-- [Communityu](#community)
+- [Community](#community)
 
 ### CLI
 
