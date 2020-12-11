@@ -37,9 +37,9 @@ Read our templates on setting up your infrastructure and automations with Mailsc
 
 #### Manage your email infrastructure
 
-Version control your email infrastructure and setup a continuos integration process whenever you submit changes.
+Version control your email infrastructure and setup a continuous integration process whenever you submit changes.
 
-#### Pipe email with attachments to an endopint
+#### Pipe email with attachments to an endpoint
 
 Fetch email attachments to further process them in your pipeline
 
