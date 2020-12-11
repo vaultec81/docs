@@ -1,1 +1,35 @@
-site_name: Mailscript docs
+# Project information
+site_name: "Documentation"
+site_description: "Mailscript brings the best features of bots and smart contracts for email."
+site_author: mailscript.com
+site_url: https://docs.mailscript.com/
+
+# Repository
+repo_name: mailscript/docs
+repo_url: https://github.com/mailscript/docs
+
+# Copyright
+copyright: "&copy; Mailscript"
+
+# Configuration
+theme:
+  name: material
+  #favicon: images/favicon.ico
+  #logo: images/hex.svg
+
+nav:
+  - Home: index.md
+  - CLI:
+      - Get started: cli/get-started.md
+      - Usage & commands:
+          - Overview: cli/commands.md
+          - Accessories: cli/accessories.md
+          - Addresses: cli/addresses.md
+          - Keys: cli/keys.md
+          - Sync: cli/sync.md
+          - Workflows: cli/workflows.md
+          - Login: cli/login.md
+          - Send: cli/send.md
+          - Usernames: cli/usernames.md
+  - API: api.md
+  - SDK Clients: sdk-clients.md
