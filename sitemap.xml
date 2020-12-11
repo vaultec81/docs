@@ -43,13 +43,5 @@
      <loc>https://docs.mailscript.com/cli/usernames/</loc>
      <lastmod>2020-12-11</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.mailscript.com/api/</loc>
-     <lastmod>2020-12-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.mailscript.com/sdk-clients/</loc>
-     <lastmod>2020-12-11</lastmod>
-     <changefreq>daily</changefreq>
     </url>
 </urlset>
