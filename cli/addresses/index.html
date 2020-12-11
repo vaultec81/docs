@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#addresses" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -285,10 +290,55 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Addresses
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Addresses
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-addressesadd" class="md-nav__link">
+    mailscript addresses:add
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-addressesdelete" class="md-nav__link">
+    mailscript addresses:delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-addresseslist" class="md-nav__link">
+    mailscript addresses:list
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -406,6 +456,50 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-addressesadd" class="md-nav__link">
+    mailscript addresses:add
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-addressesdelete" class="md-nav__link">
+    mailscript addresses:delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-addresseslist" class="md-nav__link">
+    mailscript addresses:list
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -416,9 +510,34 @@
                   </a>
                 
                 
-                  <h1>Addresses</h1>
-                
-                
+                <h1 id="addresses">addresses</h1>
+<p>Configure your email addresses</p>
+<h2 id="mailscript-addressesadd"><code>mailscript addresses:add</code></h2>
+<p>add an email address</p>
+<pre><code>USAGE
+  $ mailscript addresses:add
+
+OPTIONS
+  -a, --address=address  (required) the address
+  -h, --help             show CLI help
+</code></pre>
+<h2 id="mailscript-addressesdelete"><code>mailscript addresses:delete</code></h2>
+<p>delete an email address</p>
+<pre><code>USAGE
+  $ mailscript addresses:delete
+
+OPTIONS
+  -a, --address=address  (required) the address
+  -h, --help             show CLI help
+</code></pre>
+<h2 id="mailscript-addresseslist"><code>mailscript addresses:list</code></h2>
+<p>list your email addresses</p>
+<pre><code>USAGE
+  $ mailscript addresses:list
+
+OPTIONS
+  -h, --help  show CLI help
+</code></pre>
                 
               
               

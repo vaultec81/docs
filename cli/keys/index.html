@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#keys" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -297,10 +302,62 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Keys
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Keys
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-keysadd" class="md-nav__link">
+    mailscript keys:add
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-keysdelete" class="md-nav__link">
+    mailscript keys:delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-keyslist" class="md-nav__link">
+    mailscript keys:list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-keysupdate" class="md-nav__link">
+    mailscript keys:update
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -406,6 +463,57 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-keysadd" class="md-nav__link">
+    mailscript keys:add
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-keysdelete" class="md-nav__link">
+    mailscript keys:delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-keyslist" class="md-nav__link">
+    mailscript keys:list
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-keysupdate" class="md-nav__link">
+    mailscript keys:update
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -416,9 +524,52 @@
                   </a>
                 
                 
-                  <h1>Keys</h1>
-                
-                
+                <h1 id="keys">keys</h1>
+<p>Configure keys for your email addresses</p>
+<h2 id="mailscript-keysadd"><code>mailscript keys:add</code></h2>
+<p>add an address key</p>
+<pre><code>USAGE
+  $ mailscript keys:add
+
+OPTIONS
+  -a, --address=address  (required) the email address to look for keys against
+  -h, --help             show CLI help
+  -n, --name=name        (required) the name for the key
+  -r, --read             set the key with read permissions
+  -w, --write            set the key with write permissions
+</code></pre>
+<h2 id="mailscript-keysdelete"><code>mailscript keys:delete</code></h2>
+<p>delete an address key</p>
+<pre><code>USAGE
+  $ mailscript keys:delete
+
+OPTIONS
+  -a, --address=address  (required) the email address to look for keys against
+  -h, --help             show CLI help
+  -k, --key=key          (required) the id of the address key
+</code></pre>
+<h2 id="mailscript-keyslist"><code>mailscript keys:list</code></h2>
+<p>List the address keys for an address</p>
+<pre><code>USAGE
+  $ mailscript keys:list
+
+OPTIONS
+  -a, --address=address  (required) the email address to look for keys against
+  -h, --help             show CLI help
+</code></pre>
+<h2 id="mailscript-keysupdate"><code>mailscript keys:update</code></h2>
+<p>update an address key</p>
+<pre><code>USAGE
+  $ mailscript keys:update
+
+OPTIONS
+  -a, --address=address  (required) the email address to look for keys against
+  -h, --help             show CLI help
+  -k, --key=key          (required) the id of the address key
+  -n, --name=name        (required) the name for the key
+  -r, --read             set the key with read permissions
+  -w, --write            set the key with write permissions
+</code></pre>
                 
               
               

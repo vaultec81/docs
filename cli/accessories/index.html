@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#accessories" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -273,10 +278,55 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Accessories
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Accessories
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-accessoriesadd" class="md-nav__link">
+    mailscript accessories:add
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-accessoriesdelete" class="md-nav__link">
+    mailscript accessories:delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-accessorieslist" class="md-nav__link">
+    mailscript accessories:list
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -406,6 +456,50 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-accessoriesadd" class="md-nav__link">
+    mailscript accessories:add
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-accessoriesdelete" class="md-nav__link">
+    mailscript accessories:delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-accessorieslist" class="md-nav__link">
+    mailscript accessories:list
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -416,9 +510,35 @@
                   </a>
                 
                 
-                  <h1>Accessories</h1>
-                
-                
+                <h1 id="accessories">accessories</h1>
+<p>Configure your accessories</p>
+<h2 id="mailscript-accessoriesadd"><code>mailscript accessories:add</code></h2>
+<p>add an accessory</p>
+<pre><code>USAGE
+  $ mailscript accessories:add
+
+OPTIONS
+  -h, --help       show CLI help
+  -n, --name=name  (required) the name of the accessory
+  --sms=sms        (required) the telephone number to send the sms too
+</code></pre>
+<h2 id="mailscript-accessoriesdelete"><code>mailscript accessories:delete</code></h2>
+<p>delete an accessory</p>
+<pre><code>USAGE
+  $ mailscript accessories:delete
+
+OPTIONS
+  -a, --accessory=accessory  (required) id of the accessory to act upon
+  -h, --help                 show CLI help
+</code></pre>
+<h2 id="mailscript-accessorieslist"><code>mailscript accessories:list</code></h2>
+<p>list the accessories</p>
+<pre><code>USAGE
+  $ mailscript accessories:list
+
+OPTIONS
+  -h, --help  show CLI help
+</code></pre>
                 
               
               

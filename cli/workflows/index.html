@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#workflows" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -321,10 +326,55 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Workflows
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Workflows
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-workflowsadd" class="md-nav__link">
+    mailscript workflows:add
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-workflowsdelete" class="md-nav__link">
+    mailscript workflows:delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-workflowslist" class="md-nav__link">
+    mailscript workflows:list
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -406,6 +456,50 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-workflowsadd" class="md-nav__link">
+    mailscript workflows:add
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-workflowsdelete" class="md-nav__link">
+    mailscript workflows:delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-workflowslist" class="md-nav__link">
+    mailscript workflows:list
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -416,9 +510,58 @@
                   </a>
                 
                 
-                  <h1>Workflows</h1>
-                
-                
+                <h1 id="workflows">workflows</h1>
+<p>Configure your workflows</p>
+<h2 id="mailscript-workflowsadd"><code>mailscript workflows:add</code></h2>
+<p>add a workflow</p>
+<pre><code>USAGE
+  $ mailscript workflows:add
+
+OPTIONS
+  -a, --action=action                id of the action accessory
+  -f, --forward=forward              email address for forward action
+  -h, --help                         show CLI help
+  -h, --html=html                    html of the email
+  -r, --reply                        email address for reply action
+  -s, --subject=subject              subject of the email
+  -t, --name=name                    (required) name of the workflow
+  -t, --text=text                    text of the email
+  -t, --trigger=trigger              (required) id of the trigger accessory
+  -w, --webhook=webhook              url of the webhook to call
+  --alias=alias                      email address for alias action
+  --body=body                        file to take webhook body from
+  --domain=domain                    constrain trigger to emails are from an email address with the given domain
+  --from=from                        constrain trigger to emails from the specified address
+  --hasattachments                   constrain trigger to emails with attachments
+  --hasthewords=hasthewords          constrain trigger to emails that have the words specified
+  --headers=headers                  file to take webhook headers from
+  --method=(PUT|POST|GET)            [default: POST] HTTP method to use in webhook
+  --noninteractive                   do not ask for user input
+  --replyall                         email address for reply all action
+  --seconds=seconds                  period of time to calculate the trigger over
+  --send=send                        email address for send action
+  --sentto=sentto                    constrain trigger to emails sent to the specified address
+  --subjectcontains=subjectcontains  constrain trigger to emails whose subject contains the specified text
+  --times=times                      number of emails in a period for trigger to activate
+  --workflow=workflow                id of the workflow to be acted on
+</code></pre>
+<h2 id="mailscript-workflowsdelete"><code>mailscript workflows:delete</code></h2>
+<p>delete a workflow</p>
+<pre><code>USAGE
+  $ mailscript workflows:delete
+
+OPTIONS
+  -h, --help               show CLI help
+  -w, --workflow=workflow  (required) id of the workflow to be acted on
+</code></pre>
+<h2 id="mailscript-workflowslist"><code>mailscript workflows:list</code></h2>
+<p>list the workflows</p>
+<pre><code>USAGE
+  $ mailscript workflows:list
+
+OPTIONS
+  -h, --help  show CLI help
+</code></pre>
                 
               
               

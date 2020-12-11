@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sync" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -309,10 +314,48 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Sync
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       Sync
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-syncexport" class="md-nav__link">
+    mailscript sync:export
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-syncimport" class="md-nav__link">
+    mailscript sync:import
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -406,6 +449,43 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-syncexport" class="md-nav__link">
+    mailscript sync:export
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-syncimport" class="md-nav__link">
+    mailscript sync:import
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -416,9 +496,29 @@
                   </a>
                 
                 
-                  <h1>Sync</h1>
-                
-                
+                <h1 id="sync">sync</h1>
+<p>import/export configuration between files and Mailscript</p>
+<h2 id="mailscript-syncexport"><code>mailscript sync:export</code></h2>
+<p>export your Mailscript config to file</p>
+<pre><code>USAGE
+  $ mailscript sync:export
+
+OPTIONS
+  -h, --help       show CLI help
+  -p, --path=path  path to the file to read/write
+</code></pre>
+<p><em>See code: <a href="https://github.com/getmailscript/cli/blob/v0.3.18/src/commands/sync/export.ts">src/commands/sync/export.ts</a></em></p>
+<h2 id="mailscript-syncimport"><code>mailscript sync:import</code></h2>
+<p>import and update config from file into Mailscript</p>
+<pre><code>USAGE
+  $ mailscript sync:import
+
+OPTIONS
+  -d, --delete     force delete of entities missing from import file
+  -h, --help       show CLI help
+  -p, --path=path  (required) path to the file to read/write
+</code></pre>
+<p><em>See code: <a href="https://github.com/getmailscript/cli/blob/v0.3.18/src/commands/sync/import.ts">src/commands/sync/import.ts</a></em></p>
                 
               
               
