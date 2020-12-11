@@ -1,8 +1,9 @@
-# Project information
+# Project configuration
 site_name: "Documentation"
 site_description: "Mailscript brings the best features of bots and smart contracts for email."
 site_author: mailscript.com
 site_url: https://docs.mailscript.com/
+edit_uri: "edit/main/docs/"
 
 # Repository
 repo_name: mailscript/docs
@@ -14,8 +15,11 @@ copyright: "&copy; Mailscript"
 # Configuration
 theme:
   name: material
-  #favicon: images/favicon.ico
-  #logo: images/hex.svg
+  logo: images/logo-white.png
+  favicon: images/favicon.png
+
+extra_css:
+  - css/styles.css
 
 nav:
   - Home: index.md

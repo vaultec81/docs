@@ -1,4 +1,4 @@
-![alt text](./images/logo-black.png "Mailscript logo")
+<img src="./images/logo-black.png" width="300" alt="Mailscript logo" />
 
 # Welcome to the Mailscript documentation
 
