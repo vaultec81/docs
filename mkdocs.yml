@@ -35,5 +35,5 @@ nav:
           - Login: cli/login.md
           - Send: cli/send.md
           - Usernames: cli/usernames.md
-  - API: api.md
-  - SDK Clients: sdk-clients.md
+  #- API: api.md
+  #- SDK Clients: sdk-clients.md
