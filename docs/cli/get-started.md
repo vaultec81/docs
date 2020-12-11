@@ -71,7 +71,7 @@ mailscript keys:list --address [your email address]
 To do so use the following configuration:
 
 ```sh
-host: smtp.mailscrit.com
+host: smtp.mailscript.com
 port: 465
 user: full address (eg. username@mailscript.com)
 pass: a key corresponding to the address with write access
