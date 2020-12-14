@@ -24,9 +24,9 @@ Getting started as easy as `yarn add global mailscript`
 
 It is possible to integrate Mailscript's services directly into your own projects. To do so you can interact with the API directly. The API was built using the [OpenAPI Specification](https://swagger.io/resources/open-api/) which allows developers to interact with the underlying abstractions directly.
 
-You can use the following API definitions file: http://api.mailscript.com/swagger and we also offer a playground to try the API here: http://api.mailscript.com/docs/v1/
+You can use the following API definitions file: [`http://api.mailscript.com/swagger`](http://api.mailscript.com/swagger) and we also offer a playground to try the API here: [`http://api.mailscript.com/docs/v1/`](http://api.mailscript.com/docs/v1).
 
-Take into consideration that these two endpoints work with production code and are subject to account limits and every usage counts against your limits.
+Take into consideration that these two endpoints work with production code and are subject to account limits and every usage counts against those limits.
 
 ### SDK Clients
 
@@ -50,11 +50,11 @@ Let first time senders know you'll get back to them.
 
 #### Escalate notifications
 
-Send an sms text message when the important messages arrive.
+Send an sms text message when the important messages arrive: [two alert messages in a minute to send sms](https://github.com/mailscript/template-two-alerts-to-sms).
 
 #### Send messages to your team channels
 
-Notify your discord/slack channels when something needs their attention.
+Notify your discord/slack channels when something needs their attention: [run failed to discord #channel](https://github.com/mailscript/template-run-failed-to-discord).
 
 #### Setup mailing lists for your team
 
