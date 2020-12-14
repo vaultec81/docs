@@ -26,7 +26,7 @@ It is possible to integrate Mailscript's services directly into your own project
 
 You can use the following API definitions file: [`http://api.mailscript.com/swagger`](http://api.mailscript.com/swagger) and we also offer a playground to try the API here: [`http://api.mailscript.com/docs/v1/`](http://api.mailscript.com/docs/v1).
 
-Take into consideration that these two endpoints work with production code and are subject to account limits and every usage counts against those limits.
+Take into consideration that these two endpoints work with production code, so any updates you submit will update your account's configuration.
 
 ### SDK Clients
 
