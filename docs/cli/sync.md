@@ -15,8 +15,6 @@ OPTIONS
   -p, --path=path  path to the file to read/write
 ```
 
-_See code: [src/commands/sync/export.ts](https://github.com/getmailscript/cli/blob/v0.3.18/src/commands/sync/export.ts)_
-
 ## `mailscript sync:import`
 
 import and update config from file into Mailscript
@@ -30,5 +28,3 @@ OPTIONS
   -h, --help       show CLI help
   -p, --path=path  (required) path to the file to read/write
 ```
-
-_See code: [src/commands/sync/import.ts](https://github.com/getmailscript/cli/blob/v0.3.18/src/commands/sync/import.ts)_
