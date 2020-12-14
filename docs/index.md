@@ -36,13 +36,13 @@ Coming soon. We will be offering sdk clients that implement object wrappers on t
 
 Read our templates on setting up your infrastructure and automations with Mailscript in GitHub.
 
+#### Pipe email attachments to an endpoint
+
+Setup the first step of a pipeline with data from email attachments: [attachments to webhook](https://github.com/mailscript/template-attachments-to-webhook)
+
 #### Manage your email infrastructure
 
 Version control your email infrastructure and setup a continuous integration process whenever you submit changes.
-
-#### Pipe email with attachments to an endpoint
-
-Fetch email attachments to further process them in your pipeline
 
 #### Auto-reply to first time senders
 
