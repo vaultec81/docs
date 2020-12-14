@@ -56,9 +56,9 @@ Send an sms text message when the important messages arrive: [two alert messages
 
 Notify your discord/slack channels when something needs their attention: [run failed to discord #channel](https://github.com/mailscript/template-run-failed-to-discord).
 
-#### Setup mailing lists for your team
+#### Setup shared addresses for your team
 
-Setup a group of employees to receive messages directed to an address and have them all be able to reply from such address.
+Setup a group of employees to receive messages directed to an address and have them all be able to reply from such address: [shared address for teams](https://github.com/mailscript/template-shared-address-for-team).
 
 ## Community
 
