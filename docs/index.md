@@ -38,7 +38,7 @@ Read our templates on setting up your infrastructure and automations with Mailsc
 
 #### Pipe email attachments to an endpoint
 
-Setup the first step of a pipeline with data from email attachments: [attachments to webhook](https://github.com/mailscript/template-attachments-to-webhook)
+Setup the first step of a pipeline with data from email attachments: [attachments to webhook](https://github.com/mailscript/template-attachments-to-webhook).
 
 #### Manage your email infrastructure
 
