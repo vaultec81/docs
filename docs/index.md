@@ -6,6 +6,14 @@ Mailscript brings the best features of bots and smart contracts for email.
 
 Use our free API and CLI, in any language. No complicated setups.
 
+## Example use cases
+
+* Setup and route your companies email addresses based on a yaml file. See `mailscript sync:export --path my-email-infra.yml` for how to setup `email infrastructure as code`.
+* Redirect engineering emails based on a rota over the holidays. Mailscript `workflows` allow your team to edit the flow of emails in your company in one place.
+* Integrate that weekly csv reporting email - you know the one, it comes in every week on an email as an attached csv file - it needs to be downloaded, parsed through a cleanup script and uploaded in the company reporting database. Use `mailscript daemon` to automate the task away.
+* Auto-provision a new employees email address based off the Github event “Added to Team”, take a look at our `Github actions` integration.
+* Setup the “New Features” weekly email for your app. Sync the app's user list to a Mailscript mailing list with our `api`, then setup a `workflow` for the sales team to push the latest features out to the list.
+
 ## Technologies
 
 Learn about the different technologies that make-up Mailscript:
@@ -18,7 +26,7 @@ Learn about the different technologies that make-up Mailscript:
 
 ### CLI
 
-Getting started as easy as `yarn add global mailscript`
+Getting started is as easy as `yarn add global mailscript`
 
 ### API
 
