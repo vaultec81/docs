@@ -224,6 +224,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#example-use-cases" class="md-nav__link">
+    Example use cases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#technologies" class="md-nav__link">
     Technologies
   </a>
@@ -520,6 +527,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#example-use-cases" class="md-nav__link">
+    Example use cases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#technologies" class="md-nav__link">
     Technologies
   </a>
@@ -636,6 +650,14 @@
 <h1 id="welcome-to-the-mailscript-documentation">Welcome to the Mailscript documentation</h1>
 <p>Mailscript brings the best features of bots and smart contracts for email.</p>
 <p>Use our free API and CLI, in any language. No complicated setups.</p>
+<h2 id="example-use-cases">Example use cases</h2>
+<ul>
+<li>Setup and route your companies email addresses based on a yaml file. See <code>mailscript sync:export --path my-email-infra.yml</code> for how to setup <code>email infrastructure as code</code>.</li>
+<li>Redirect engineering emails based on a rota over the holidays. Mailscript <code>workflows</code> allow your team to edit the flow of emails in your company in one place.</li>
+<li>Integrate that weekly csv reporting email - you know the one, it comes in every week on an email as an attached csv file - it needs to be downloaded, parsed through a cleanup script and uploaded in the company reporting database. Use <code>mailscript daemon</code> to automate the task away.</li>
+<li>Auto-provision a new employees email address based off the Github event “Added to Team”, take a look at our <code>Github actions</code> integration.</li>
+<li>Setup the “New Features” weekly email for your app. Sync the app's user list to a Mailscript mailing list with our <code>api</code>, then setup a <code>workflow</code> for the sales team to push the latest features out to the list.</li>
+</ul>
 <h2 id="technologies">Technologies</h2>
 <p>Learn about the different technologies that make-up Mailscript:</p>
 <ul>
@@ -646,7 +668,7 @@
 <li><a href="#community">Community</a></li>
 </ul>
 <h3 id="cli">CLI</h3>
-<p>Getting started as easy as <code>yarn add global mailscript</code></p>
+<p>Getting started is as easy as <code>yarn add global mailscript</code></p>
 <h3 id="api">API</h3>
 <p>It is possible to integrate Mailscript's services directly into your own projects. To do so you can interact with the API directly. The API was built using the <a href="https://swagger.io/resources/open-api/">OpenAPI Specification</a> which allows developers to interact with the underlying abstractions directly.</p>
 <p>You can use the following API definitions file: <a href="http://api.mailscript.com/swagger"><code>http://api.mailscript.com/swagger</code></a> and we also offer a playground to try the API here: <a href="http://api.mailscript.com/docs/v1"><code>http://api.mailscript.com/docs/v1/</code></a>.</p>
