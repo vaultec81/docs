@@ -50,7 +50,7 @@ Setup the first step of a pipeline with data from email attachments: [attachment
 
 #### Manage your email infrastructure
 
-Version control your email infrastructure and setup a continuous integration process whenever you submit changes.
+Version control your email infrastructure and setup a continuous integration process whenever you submit changes: [email infrastructure management](https://github.com/mailscript/template-email-infrastructure).
 
 #### Auto-reply to first time senders
 
