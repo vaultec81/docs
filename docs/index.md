@@ -54,7 +54,7 @@ Version control your email infrastructure and setup a continuous integration pro
 
 #### Auto-reply to first time senders
 
-Let first time senders know you'll get back to them.
+Let first time senders know you'll get back to them: [auto-reply to first time senders](https://github.com/mailscript/template-auto-reply-first-time-sender).
 
 #### Escalate notifications
 
