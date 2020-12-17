@@ -94,3 +94,36 @@ Mailscript offers outputs based on three different kinds of actions that can hap
 - Email actions: send a new email message, forward the received email message, redirect the message to another address and reply to the sender or all participants in the received message.
 - SMS action: send an sms text to a specified number.
 - Webhook action: send a request to an endpoint. The request can be customized to suit your needs (eg. customize verbs, headers and payload; you can even use data from the received message into the delivered payload).
+
+## Daemon
+
+The Mailscript cli allows you to use your local machine, or a server, as an accessory in a workflow.
+
+Using the `mailscript daemon` command you can run a local daemon that will execute a script you specify as part of a `workflow` and in response to an email.
+
+### Setting up a daemon
+
+First register a new daemon accessory:
+
+```shell
+mailscript accessories:add --name my-laptop --daemon
+```
+
+We can now include the accessory in a workflow (use one of your own mailscript email addresses in the trigger):
+
+```shell
+mailscript workflows:add \
+  --name cowsay \
+  --trigger cowsay@myuser.mailscript.com \
+  --action my-laptop
+```
+
+Any email sent to the trigger address, will be forwarded to the daemon listening on the `my-laptop` accessory. To setup such a daemon run:
+
+```shell
+mailscript daemon \
+  --accessory my-laptop \
+  --command "cowsay \$subject"
+```
+
+The command parameter specifies the shell script to run when the workflow sends an email to the daemon accessory, in this case the `cowsay` utility. The contents of the email are made available through the `$subject` and `$text` environment variables. The command will be executed each time on each received email.

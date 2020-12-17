@@ -29,6 +29,7 @@ nav:
           - Overview: cli/commands.md
           - Accessories: cli/accessories.md
           - Addresses: cli/addresses.md
+          - Daemon: cli/daemon.md
           - Keys: cli/keys.md
           - Sync: cli/sync.md
           - Workflows: cli/workflows.md
