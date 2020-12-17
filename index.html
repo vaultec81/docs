@@ -427,6 +427,18 @@
 
 
   <li class="md-nav__item">
+    <a href="cli/daemon/" class="md-nav__link">
+      Daemon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="cli/keys/" class="md-nav__link">
       Keys
     </a>
@@ -653,7 +665,7 @@
 <h2 id="example-use-cases">Example use cases</h2>
 <ul>
 <li>Setup and route your companies email addresses based on a yaml file. See <code>mailscript sync:export --path my-email-infra.yml</code> for how to setup <code>email infrastructure as code</code>.</li>
-<li>Redirect engineering emails based on a rota over the holidays. Mailscript <code>workflows</code> allow your team to edit the flow of emails in your company in one place.</li>
+<li>Redirect engineering emails based on a schedule over the holidays. Mailscript <code>workflows</code> allow your team to edit the flow of emails in your company in one place.</li>
 <li>Integrate that weekly csv reporting email - you know the one, it comes in every week on an email as an attached csv file - it needs to be downloaded, parsed through a cleanup script and uploaded in the company reporting database. Use <code>mailscript daemon</code> to automate the task away.</li>
 <li>Auto-provision a new employees email address based off the Github event “Added to Team”, take a look at our <code>Github actions</code> integration.</li>
 <li>Setup the “New Features” weekly email for your app. Sync the app's user list to a Mailscript mailing list with our <code>api</code>, then setup a <code>workflow</code> for the sales team to push the latest features out to the list.</li>

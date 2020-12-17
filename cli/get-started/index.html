@@ -351,6 +351,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#daemon" class="md-nav__link">
+    Daemon
+  </a>
+  
+    <nav class="md-nav" aria-label="Daemon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-daemon" class="md-nav__link">
+    Setting up a daemon
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -410,6 +430,18 @@
   <li class="md-nav__item">
     <a href="../addresses/" class="md-nav__link">
       Addresses
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../daemon/" class="md-nav__link">
+      Daemon
     </a>
   </li>
 
@@ -613,6 +645,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#daemon" class="md-nav__link">
+    Daemon
+  </a>
+  
+    <nav class="md-nav" aria-label="Daemon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-daemon" class="md-nav__link">
+    Setting up a daemon
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -687,6 +739,25 @@ pass: a key corresponding to the address with write access
 <li>SMS action: send an sms text to a specified number.</li>
 <li>Webhook action: send a request to an endpoint. The request can be customized to suit your needs (eg. customize verbs, headers and payload; you can even use data from the received message into the delivered payload).</li>
 </ul>
+<h2 id="daemon">Daemon</h2>
+<p>The Mailscript cli allows you to use your local machine, or a server, as an accessory in a workflow.</p>
+<p>Using the <code>mailscript daemon</code> command you can run a local daemon that will execute a script you specify as part of a <code>workflow</code> and in response to an email.</p>
+<h3 id="setting-up-a-daemon">Setting up a daemon</h3>
+<p>First register a new daemon accessory:</p>
+<pre><code class="language-shell">mailscript accessories:add --name my-laptop --daemon
+</code></pre>
+<p>We can now include the accessory in a workflow (use one of your own mailscript email addresses in the trigger):</p>
+<pre><code class="language-shell">mailscript workflows:add \
+  --name cowsay \
+  --trigger cowsay@myuser.mailscript.com \
+  --action my-laptop
+</code></pre>
+<p>Any email sent to the trigger address, will be forwarded to the daemon listening on the <code>my-laptop</code> accessory. To setup such a daemon run:</p>
+<pre><code class="language-shell">mailscript daemon \
+  --accessory my-laptop \
+  --command &quot;cowsay \$subject&quot;
+</code></pre>
+<p>The command parameter specifies the shell script to run when the workflow sends an email to the daemon accessory, in this case the <code>cowsay</code> utility. The contents of the email are made available through the <code>$subject</code> and <code>$text</code> environment variables. The command will be executed each time on each received email.</p>
                 
               
               
