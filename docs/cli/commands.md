@@ -4,22 +4,24 @@
 Configure and manipulate email pipeline in Mailscript from the cli
 
 VERSION
-  mailscript/0.3.18 darwin-x64 node-v15.3.0
+  mailscript/0.3.27 darwin-x64 node-v14.3.0
 
 USAGE
   $ mailscript [COMMAND]
 
 TOPICS
-  accessories  configure your accessories
-  addresses    configure your email addresses
-  keys         configure keys for your email addresses
-  sync         import/export configuration between files and Mailscript
-  workflows    configure your workflows
+  actions    add an action
+  addresses  configure your email addresses
+  keys       add an address key
+  sync       import/export configuration between files and Mailscript
+  triggers   add a trigger
+  workflows  configure your workflows
 
 COMMANDS
+  daemon     Run a daemon to execute scripts on email arrival
   help       display help for mailscript
-  login      sign up or login to your account
-  send       send an email from one of your addresses
+  login
+  send       send an email from a mailscript address
   usernames  manipulate usernames
 ```
 
@@ -33,11 +35,12 @@ COMMANDS
 
 ### See also
 
-- [`accessories`](/cli/accessories) - Manipulates accessories
 - [`addresses`](/cli/addresses) - Manipulates addresses
 - [`keys`](/cli/keys) - Manipulates address keys
-- [`sync`](/cli/sync) - Manipulates usernames
-- [`workflows`](/cli/workflows) - Manipulates automations
+- [`actions`](/cli/actions) - Manipulates actions
+- [`triggers`](/cli/triggers) - Manipulates triggers
+- [`sync`](/cli/sync) - Allows to import/export triggers, actions and workflows
+- [`workflows`](/cli/workflows) - Manipulates workflows
 - [`login`](/cli/login) - Sign up or login to your account
 - [`send`](/cli/send) - Send an email from one of your addresses
 - [`usernames`](/cli/usernames) - Manipulates usernames

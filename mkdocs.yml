@@ -27,12 +27,13 @@ nav:
       - Get started: cli/get-started.md
       - Usage & commands:
           - Overview: cli/commands.md
-          - Accessories: cli/accessories.md
           - Addresses: cli/addresses.md
-          - Daemon: cli/daemon.md
           - Keys: cli/keys.md
-          - Sync: cli/sync.md
+          - Triggers: cli/triggers.md
+          - Actions: cli/actions.md
           - Workflows: cli/workflows.md
+          - Daemon: cli/daemon.md
+          - Sync: cli/sync.md
           - Login: cli/login.md
           - Send: cli/send.md
           - Usernames: cli/usernames.md
