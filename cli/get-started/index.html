@@ -723,6 +723,8 @@
 <li>Claim addresses.</li>
 <li>Create keys for your addresses.</li>
 <li>Create workflows for your automations.</li>
+<li>Add triggers for your workflows.</li>
+<li>Add actions for your workflows.</li>
 <li>And more.</li>
 </ul>
 <p>The first step is to download and install the executable.</p>
@@ -763,7 +765,7 @@ pass: a key corresponding to the address with write access
 </code></pre>
 <p>Next, you can start setting up workflows whenever your addresses receive an email message.</p>
 <h2 id="workflows">Workflows</h2>
-<p>Workflows allow you to setup automations when a message arrives at any of the addresses you control. A workflow consists of a trigger and an action. Whenever a trigger is met the corresponding actions will beexecuted.</p>
+<p>Workflows allow you to setup automations when a message arrives at any of the addresses you control. A workflow consists of a trigger and an action. Whenever a trigger is met the corresponding actions will be executed.</p>
 <h3 id="triggers">Triggers</h3>
 <p>Currently mailscript allows you to set up triggers based on incoming messages to addresses you control. You can set criteria to filter specific messages to rigger actions (eg. messages sent from a specific address, messages that include attachments, that contain specific words in the subject or body, messages that contain attachments, mailscript even allows you to set up filters matching specific headers in your email message!)</p>
 <h3 id="actions">Actions</h3>
@@ -774,13 +776,13 @@ pass: a key corresponding to the address with write access
 <li>Webhook action: send a request to an endpoint. The request can be customized to suit your needs (eg. customize verbs, headers and payload; you can even use data from the received message into the delivered payload).</li>
 </ul>
 <h2 id="daemon">Daemon</h2>
-<p>The Mailscript cli allows you to use your local machine, or a server, as an accessory in a workflow.</p>
+<p>The Mailscript cli allows you to use your local machine, or a server, as an output for an action in a workflow.</p>
 <p>Using the <code>mailscript daemon</code> command you can run a local daemon that will execute a script you specify as part of a <code>workflow</code> and in response to an email.</p>
 <h3 id="setting-up-a-daemon">Setting up a daemon</h3>
 <p>First register a new daemon action:</p>
 <pre><code class="language-shell">mailscript actions:add --name &quot;action name&quot; --daemon &quot;daemon name&quot;
 </code></pre>
-<p>We can now include the accessory in a workflow (use one of your own mailscript email addresses in the trigger):</p>
+<p>We can now include the daemon in a workflow:</p>
 <pre><code class="language-shell">mailscript workflows:add \
   --name &quot;workflow name&quot; \
   --trigger &quot;trigger name&quot; \
@@ -791,7 +793,7 @@ pass: a key corresponding to the address with write access
   --daemon &quot;daemon name&quot;
   --command &quot;cowsay \$subject&quot;
 </code></pre>
-<p>The command parameter specifies the shell script to run when the workflow sends an email to the daemon accessory, in this case the <code>cowsay</code> utility. The contents of the email are made available through the <code>$subject</code> and <code>$text</code> environment variables. The command will be executed each time on each received email.</p>
+<p>The command parameter specifies the shell script to run when the workflow sends an email to the daemon action, in this case the <code>cowsay</code> utility. The contents of the email are made available through the <code>$subject</code> and <code>$text</code> environment variables. The command will be executed each time on each received email.</p>
                 
               
               
