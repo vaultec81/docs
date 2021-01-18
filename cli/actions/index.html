@@ -13,14 +13,14 @@
         <meta name="author" content="mailscript.com">
       
       
-        <link rel="canonical" href="https://docs.mailscript.com/cli/usernames/">
+        <link rel="canonical" href="https://docs.mailscript.com/cli/actions/">
       
       <link rel="shortcut icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
     
     
       
-        <title>Usernames - Documentation</title>
+        <title>Actions - Documentation</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usernames" class="md-skip">
+        <a href="#actions" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Usernames
+              Actions
             
           </span>
         </div>
@@ -325,11 +325,63 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../actions/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Actions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Actions
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-actionsadd" class="md-nav__link">
+    mailscript actions:add
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-actionscombine" class="md-nav__link">
+    mailscript actions:combine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-actionslist" class="md-nav__link">
+    mailscript actions:list
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -397,49 +449,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Usernames
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../usernames/" class="md-nav__link">
         Usernames
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#mailscript-usernames-subcommand" class="md-nav__link">
-    mailscript usernames SUBCOMMAND
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -481,8 +495,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mailscript-usernames-subcommand" class="md-nav__link">
-    mailscript usernames SUBCOMMAND
+  <a href="#mailscript-actionsadd" class="md-nav__link">
+    mailscript actions:add
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-actionscombine" class="md-nav__link">
+    mailscript actions:combine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mailscript-actionslist" class="md-nav__link">
+    mailscript actions:list
   </a>
   
 </li>
@@ -499,21 +527,33 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mailscript/docs/edit/main/docs/cli/usernames.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mailscript/docs/edit/main/docs/cli/actions.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="usernames">usernames</h1>
-<p>Configure your usernames</p>
-<h2 id="mailscript-usernames-subcommand"><code>mailscript usernames SUBCOMMAND</code></h2>
-<p>manipulate usernames</p>
+                <h1 id="actions">actions</h1>
+<p>Configure your actions</p>
+<h2 id="mailscript-actionsadd"><code>mailscript actions:add</code></h2>
+<p>add an action</p>
 <pre><code>USAGE
-  $ mailscript usernames SUBCOMMAND
+  $ mailscript actions:add
 
 OPTIONS
-  -h, --help               show CLI help
-  -n, --username=username  the username to claim
+  -n, --name=name  (required) the name of the action
+</code></pre>
+<h2 id="mailscript-actionscombine"><code>mailscript actions:combine</code></h2>
+<p>create an action by combining other actions</p>
+<pre><code>USAGE
+  $ mailscript actions:combine
+
+OPTIONS
+  -n, --name=name (required) the name of the new action
+</code></pre>
+<h2 id="mailscript-actionslist"><code>mailscript actions:list</code></h2>
+<p>list the actions</p>
+<pre><code>USAGE
+  $ mailscript actions:list
 </code></pre>
                 
               
@@ -533,7 +573,7 @@ OPTIONS
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../send/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../triggers/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -542,11 +582,25 @@ OPTIONS
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Send
+                Triggers
               </div>
             </div>
           </a>
         
+        
+          <a href="../workflows/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Workflows
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>

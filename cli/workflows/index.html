@@ -291,32 +291,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../accessories/" class="md-nav__link">
-        Accessories
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../addresses/" class="md-nav__link">
         Addresses
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../daemon/" class="md-nav__link">
-        Daemon
       </a>
     </li>
   
@@ -339,8 +315,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../sync/" class="md-nav__link">
-        Sync
+      <a href="../triggers/" class="md-nav__link">
+        Triggers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actions/" class="md-nav__link">
+        Actions
       </a>
     </li>
   
@@ -406,6 +394,30 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daemon/" class="md-nav__link">
+        Daemon
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync/" class="md-nav__link">
+        Sync
+      </a>
     </li>
   
 
@@ -528,32 +540,10 @@
   $ mailscript workflows:add
 
 OPTIONS
-  -a, --action=action                id of the action accessory
-  -f, --forward=forward              email address for forward action
-  -h, --help                         show CLI help
-  -h, --html=html                    html of the email
-  -r, --reply                        email address for reply action
-  -s, --subject=subject              subject of the email
-  -t, --name=name                    (required) name of the workflow
-  -t, --text=text                    text of the email
-  -t, --trigger=trigger              (required) id of the trigger accessory
-  -w, --webhook=webhook              url of the webhook to call
-  --alias=alias                      email address for alias action
-  --body=body                        file to take webhook body from
-  --domain=domain                    constrain trigger to emails are from an email address with the given domain
-  --from=from                        constrain trigger to emails from the specified address
-  --hasattachments                   constrain trigger to emails with attachments
-  --hasthewords=hasthewords          constrain trigger to emails that have the words specified
-  --headers=headers                  file to take webhook headers from
-  --method=(PUT|POST|GET)            [default: POST] HTTP method to use in webhook
-  --noninteractive                   do not ask for user input
-  --replyall                         email address for reply all action
-  --seconds=seconds                  period of time to calculate the trigger over
-  --send=send                        email address for send action
-  --sentto=sentto                    constrain trigger to emails sent to the specified address
-  --subjectcontains=subjectcontains  constrain trigger to emails whose subject contains the specified text
-  --times=times                      number of emails in a period for trigger to activate
-  --workflow=workflow                id of the workflow to be acted on
+  -o, --input=input      (required) name of the input to listen in for incoming emails
+  -t, --trigger=trigger  (required) name of the trigger to be used
+  -a, --action=action    (required) name of the action to be executed
+  -n, --name=name        (required) name of the workflow
 </code></pre>
 <h2 id="mailscript-workflowsdelete"><code>mailscript workflows:delete</code></h2>
 <p>delete a workflow</p>
@@ -561,16 +551,12 @@ OPTIONS
   $ mailscript workflows:delete
 
 OPTIONS
-  -h, --help               show CLI help
   -w, --workflow=workflow  (required) id of the workflow to be acted on
 </code></pre>
 <h2 id="mailscript-workflowslist"><code>mailscript workflows:list</code></h2>
 <p>list the workflows</p>
 <pre><code>USAGE
   $ mailscript workflows:list
-
-OPTIONS
-  -h, --help  show CLI help
 </code></pre>
                 
               
@@ -590,7 +576,7 @@ OPTIONS
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../sync/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../actions/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -599,19 +585,19 @@ OPTIONS
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Sync
+                Actions
               </div>
             </div>
           </a>
         
         
-          <a href="../login/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../daemon/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Login
+                Daemon
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

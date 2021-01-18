@@ -12,15 +12,7 @@
      <lastmod>2021-01-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.mailscript.com/cli/accessories/</loc>
-     <lastmod>2021-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://docs.mailscript.com/cli/addresses/</loc>
-     <lastmod>2021-01-18</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.mailscript.com/cli/daemon/</loc>
      <lastmod>2021-01-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -28,11 +20,23 @@
      <lastmod>2021-01-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.mailscript.com/cli/sync/</loc>
+     <loc>https://docs.mailscript.com/cli/triggers/</loc>
+     <lastmod>2021-01-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.mailscript.com/cli/actions/</loc>
      <lastmod>2021-01-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.mailscript.com/cli/workflows/</loc>
+     <lastmod>2021-01-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.mailscript.com/cli/daemon/</loc>
+     <lastmod>2021-01-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.mailscript.com/cli/sync/</loc>
      <lastmod>2021-01-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
