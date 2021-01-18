@@ -103,26 +103,26 @@ Using the `mailscript daemon` command you can run a local daemon that will execu
 
 ### Setting up a daemon
 
-First register a new daemon accessory:
+First register a new daemon action:
 
 ```shell
-mailscript accessories:add --name my-laptop --daemon
+mailscript actions:add --name "action name" --daemon "daemon name"
 ```
 
 We can now include the accessory in a workflow (use one of your own mailscript email addresses in the trigger):
 
 ```shell
 mailscript workflows:add \
-  --name cowsay \
-  --trigger cowsay@myuser.mailscript.com \
-  --action my-laptop
+  --name "workflow name" \
+  --trigger "trigger name" \
+  --action "daemon name"
 ```
 
-Any email sent to the trigger address, will be forwarded to the daemon listening on the `my-laptop` accessory. To setup such a daemon run:
+Any email sent to the input and that matches the trigger, will be forwarded to the daemon listening on the `daemon name` action. To setup such a daemon run:
 
 ```shell
 mailscript daemon \
-  --accessory my-laptop \
+  --daemon "daemon name"
   --command "cowsay \$subject"
 ```
 
