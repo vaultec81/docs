@@ -6,6 +6,8 @@ To create an account, you first need to install the Mailscript CLI. The CLI is w
 - Claim addresses.
 - Create keys for your addresses.
 - Create workflows for your automations.
+- Add triggers for your workflows.
+- Add actions for your workflows.
 - And more.
 
 The first step is to download and install the executable.
@@ -81,7 +83,7 @@ Next, you can start setting up workflows whenever your addresses receive an emai
 
 ## Workflows
 
-Workflows allow you to setup automations when a message arrives at any of the addresses you control. A workflow consists of a trigger and an action. Whenever a trigger is met the corresponding actions will beexecuted.
+Workflows allow you to setup automations when a message arrives at any of the addresses you control. A workflow consists of a trigger and an action. Whenever a trigger is met the corresponding actions will be executed.
 
 ### Triggers
 
@@ -97,7 +99,7 @@ Mailscript offers outputs based on three different kinds of actions that can hap
 
 ## Daemon
 
-The Mailscript cli allows you to use your local machine, or a server, as an accessory in a workflow.
+The Mailscript cli allows you to use your local machine, or a server, as an output for an action in a workflow.
 
 Using the `mailscript daemon` command you can run a local daemon that will execute a script you specify as part of a `workflow` and in response to an email.
 
@@ -109,7 +111,7 @@ First register a new daemon action:
 mailscript actions:add --name "action name" --daemon "daemon name"
 ```
 
-We can now include the accessory in a workflow (use one of your own mailscript email addresses in the trigger):
+We can now include the daemon in a workflow:
 
 ```shell
 mailscript workflows:add \
@@ -126,4 +128,4 @@ mailscript daemon \
   --command "cowsay \$subject"
 ```
 
-The command parameter specifies the shell script to run when the workflow sends an email to the daemon accessory, in this case the `cowsay` utility. The contents of the email are made available through the `$subject` and `$text` environment variables. The command will be executed each time on each received email.
+The command parameter specifies the shell script to run when the workflow sends an email to the daemon action, in this case the `cowsay` utility. The contents of the email are made available through the `$subject` and `$text` environment variables. The command will be executed each time on each received email.
