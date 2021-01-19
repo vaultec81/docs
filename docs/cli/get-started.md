@@ -23,7 +23,7 @@ yarn global add mailscript
 or
 
 ```sh
-npm install global mailscript
+npm install -g mailscript
 ```
 
 ## Account setup
