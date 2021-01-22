@@ -32,7 +32,7 @@ Getting started is as easy as `yarn add global mailscript`
 
 It is possible to integrate Mailscript's services directly into your own projects. To do so you can interact with the API directly. The API was built using the [OpenAPI Specification](https://swagger.io/resources/open-api/) which allows developers to interact with the underlying abstractions directly.
 
-You can use the following API definitions file: [`http://api.mailscript.com/swagger`](http://api.mailscript.com/swagger) and we also offer a playground to try the API here: [`http://api.mailscript.com/docs/v1/`](http://api.mailscript.com/docs/v1).
+You can use the following API definitions file: [`http://api.mailscript.com/v2/swagger`](http://api.mailscript.com/v2/swagger) and we also offer a playground to try the API here: [`http://api.mailscript.com/v2/docs`](http://api.mailscript.com/v2/docs).
 
 Take into consideration that these two endpoints work with production code, so any updates you submit will update your account's configuration.
 

@@ -24,7 +24,8 @@ USAGE
   $ mailscript sync:import
 
 OPTIONS
-  -d, --delete     force delete of entities missing from import file
-  -h, --help       show CLI help
-  -p, --path=path  (required) path to the file to read/write
+  -d, --delete      force delete of entities missing from import file
+  -h, --help        show CLI help
+  -p, --path=path   (required) path to the file to read/write
+  --noninteractive  do not ask for user input
 ```

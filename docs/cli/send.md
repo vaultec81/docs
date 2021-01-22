@@ -12,8 +12,8 @@ USAGE
 
 OPTIONS
   -b, --text=text        text of email
+  -f, --from=from        (required) email address to use for sending
   -h, --help             show CLI help
   -s, --subject=subject  (required) subject line of email
-  -t, --from=from        (required) email address to use for sending
   -t, --to=to            (required) email address to send to
 ```

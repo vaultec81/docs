@@ -11,10 +11,12 @@ USAGE
   $ mailscript workflows:add
 
 OPTIONS
-  -o, --input=input      (required) name of the input to listen in for incoming emails
-  -t, --trigger=trigger  (required) name of the trigger to be used
-  -a, --action=action    (required) name of the action to be executed
+  -a, --action=action    (required) name of the action accessory
+  -h, --help             show CLI help
   -n, --name=name        (required) name of the workflow
+  -o, --input=input      (required) name of the input
+  -t, --trigger=trigger  name of the trigger accessory
+  --workflow=workflow    id of the workflow to be acted on
 ```
 
 ## `mailscript workflows:delete`
@@ -26,6 +28,7 @@ USAGE
   $ mailscript workflows:delete
 
 OPTIONS
+  -h, --help               show CLI help
   -w, --workflow=workflow  (required) id of the workflow to be acted on
 ```
 
