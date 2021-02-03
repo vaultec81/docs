@@ -17,13 +17,13 @@ The first step is to download and install the executable.
 Install the CLI executable from the npm registry: [mailscript](https://www.npmjs.com/package/mailscript) with
 
 ```sh
-yarn global add mailscript
+npm install -g mailscript
 ```
 
 or
 
 ```sh
-npm install -g mailscript
+yarn global add mailscript
 ```
 
 ## Account setup
@@ -44,13 +44,20 @@ mailscript login --offline
 
 ### Initialize
 
-If this is the first time you are signing in you'll be prompted to pick a username. Once the you've has selected a username your account setup will be complete.
+If this is the first time you are signing in you'll be prompted to pick a username. Mailscript automatically creates a new email address based on your username:
+
+> username@mailscript.com
+
+The cli will also prompt you to setup an `alias` workflow, that will alias any emails coming into `username@mailscript.com` to an email address you specify and verify.
+
+With the initialization now complete you can test your new mailscript email by sending
+an email to `username@mailscript.com` and receiving it at the aliasing address your specified.
 
 ## Addresses
 
-`Addresses` allow you to send and receive email messages. You receive a top level domain address corresponding to your selected username (eg. _username@mailscript.com_) and you can create addresses using your username as a first level subdomain (eg. _team@username.mailscript.com_)
+`Addresses` allow you to send and receive email messages. You receive a top level domain address corresponding to your selected username (eg. _username@mailscript.com_) and you can create further addresses using your username as a first level subdomain (eg. _team@username.mailscript.com_).
 
-You can create an `address` easily:
+You can create additional `addresses` at the cli:
 
 ```sh
 mailscript addresses:add --address address@username.mailscript.com
@@ -83,19 +90,26 @@ Next, you can start setting up workflows whenever your addresses receive an emai
 
 ## Workflows
 
-Workflows allow you to setup automations when a message arrives at any of the addresses you control. A workflow consists of a trigger and an action. Whenever a trigger is met the corresponding actions will be executed.
+Workflows allow you to setup automations when a message arrives at any of the addresses you control. A workflow consists of an input email address, optionally a trigger that filters down to the intended emails and an action. Whenever a trigger is met the corresponding actions will be executed. If there is not trigger then every email triggers the action.
 
 ### Triggers
 
-Currently mailscript allows you to set up triggers based on incoming messages to addresses you control. You can set criteria to filter specific messages to rigger actions (eg. messages sent from a specific address, messages that include attachments, that contain specific words in the subject or body, messages that contain attachments, mailscript even allows you to set up filters matching specific headers in your email message!)
+A trigger is a named criteria used to filter down a stream of messages into the ones that should be acted upon.
+
+Currently mailscript allows you to set up triggers based on incoming messages to addresses you control. You can set criteria to filter specific messages that the trigger will pass to the action (eg. messages sent from a specific address, messages that include attachments, that contain specific words in the subject or body, messages that contain attachments, mailscript even allows you to set up filters matching specific headers in your email message!).
+
+Triggers can be composed together to form new triggers, for instance composing a trigger for all emails that both have the word 'alert' in their subject and come from the address of the website monitoring system.
 
 ### Actions
 
-Mailscript offers outputs based on three different kinds of actions that can happen when a trigger is met:
+An action is definition of the effect a workflow should have when an email successfully passes the trigger contraints.
+
+Mailscript offers outputs based on four different kinds of actions that can happen when a trigger is met:
 
 - Email actions: send a new email message, forward the received email message, redirect the message to another address and reply to the sender or all participants in the received message.
 - SMS action: send an sms text to a specified number.
 - Webhook action: send a request to an endpoint. The request can be customized to suit your needs (eg. customize verbs, headers and payload; you can even use data from the received message into the delivered payload).
+- Send to local Daemon: send the email parsed as json to a mailscript daemon you are running on a server/container/laptop you control. The daemon will invoke a script you specify on receiving a new email message.
 
 ## Daemon
 
