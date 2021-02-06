@@ -26,7 +26,7 @@ Learn about the different technologies that make-up Mailscript:
 
 ### CLI
 
-Getting started is as easy as `yarn add global mailscript`
+Getting started is as easy as `yarn global add mailscript`
 
 ### API
 
