@@ -44,6 +44,7 @@ mailscript login --offline
 
 ### Initialize
 
+
 If this is the first time you are signing in you'll be prompted to pick a username. Mailscript automatically creates a new email address based on your username:
 
 > username@mailscript.com
@@ -65,9 +66,11 @@ mailscript addresses:add --address address@username.mailscript.com
 
 ### Keys
 
-`Keys` allow you to share scoped access (_write_ and/or _read_) to addresses you control with other people. Whenever you add an address a key is generated with full access for you.
+`Keys` allow you to share scoped access (_write_ and/or _read_) to addresses you control with other people. Whenever you add an address, a key is generated with full access for you.
 
 You can list the keys for any address you control with the following command:
+
+[your email address] will be the full address such as `username@mailscript.com` or `team@username.mailscript.com`
 
 ```
 mailscript keys:list --address [your email address]
@@ -75,9 +78,9 @@ mailscript keys:list --address [your email address]
 
 #### SMTP gateway
 
-`Keys` with the _write_ access can be used to setup `smtp` access to allow email clients to send messages from any mailscript address.
+`Keys` with the _write_ access can be used to setup `smtp` access to allow 3rd party email clients to send messages from any mailscript address.
 
-To do so use the following configuration:
+To do so use the following configuration in your email client:
 
 ```sh
 host: smtp.mailscript.com
